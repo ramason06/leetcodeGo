@@ -1,12 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	nums1 := []int{0, 1, 2, 2, 3, 0, 4, 2}
-	fmt.Println(removeElement(nums1, 2))
-	fmt.Println(nums1)
-}
+package easy
 
 func removeElement(nums []int, val int) int {
 	i, k := 0, 0
@@ -19,6 +11,19 @@ func removeElement(nums []int, val int) int {
 			nums = append(nums[:i], nums[i+1:]...)
 		} else {
 			i++
+		}
+	}
+
+	return k
+}
+
+func removeElement2(nums []int, val int) int {
+	k := 0
+
+	for i := 0; i < len(nums); i++ {
+		if nums[i] != val {
+			nums[k] = nums[i]
+			k++
 		}
 	}
 
