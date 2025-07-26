@@ -1,12 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	nums1 := []int{1, 2, 2, 1, 1, 0}
-	fmt.Println(applyOperations(nums1))
-	fmt.Println(nums1)
-}
+package easy
 
 func applyOperations(nums []int) []int {
 	for i := 0; i < len(nums)-1; i++ {
